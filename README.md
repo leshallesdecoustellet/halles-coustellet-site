@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Les Halles de Coustellet - site vitrine
 
-## Getting Started
+Site Next.js 14 (App Router) + Tailwind CSS + Framer Motion pour le foodcourt Les Halles de Coustellet (Oppede, Luberon).
 
-First, run the development server:
+## Demarrer
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Site en 4 pages (forfait client 5 pages, 1 page en reserve), hors pages legales offertes :
 
-## Learn More
+- `/` - Accueil (`src/app/page.tsx`)
+- `/cuisines` - Les 6 cuisines, chacune en section ancree sur une seule page (`src/app/cuisines/page.tsx`), remplace les anciennes pages individuelles `/stands/[slug]`.
+- `/infos-pratiques` - Horaires et adresse (`src/app/infos-pratiques/page.tsx`).
+- `/contact` - Formulaire et coordonnees (`src/app/contact/page.tsx`).
+- `src/content/stands.ts` - contenu editorial des 6 cuisines (cartes reelles transcrites, textes narratifs provisoires).
+- `src/lib/site.ts` - informations NAP (nom, adresse, telephone, horaires) utilisees pour le schema.org et les pages infos/contact.
+- `src/components` - composants partages (nav, footer, cartes, placeholders photo, etc).
+- `public/images` - photos et logos reels fournis, organises par stand. `source-assets/` (racine du projet) contient les fichiers originaux bruts.
 
-To learn more about Next.js, take a look at the following resources:
+## A confirmer avant mise en production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Horaires : confirmes par la signaletique officielle du client. Cas particuliers (traiteur, jours feries, periode hivernale) a verifier avec l'exploitant.
+- Adresse : le brief indique "1 Rue du Grenache", confirmee "1 Rue de la Syrah" par l'enseigne sur place et une photo du client.
+- Photos manquantes : ambiance en soiree et concerts/evenements affichent encore un placeholder "Photo a venir", en attente des visuels definitifs. La crêperie n'a pas de logo fourni par le client.
+- Numeros de telephone par stand : ajoutes sur `/cuisines`, a partir d'une affiche fournie par le client - a faire valider avant publication.
+- Formulaire de contact (`/contact`) : l'UI est fonctionnelle mais la soumission n'est pas encore branchee a un service d'envoi d'email (voir commentaire dans `src/components/ContactForm.tsx`). Le client doit encore valider s'il le garde.
+- Coordonnees GPS dans `src/lib/site.ts` (`geo`) sont approximatives.
