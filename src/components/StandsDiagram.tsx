@@ -15,12 +15,12 @@ const steps = [
 ];
 
 const nodePosition: { left: string; top: string; tip: "above" | "below" }[] = [
-  { left: "6%", top: "76%", tip: "above" },
-  { left: "22%", top: "40%", tip: "below" },
-  { left: "34%", top: "6%", tip: "below" },
-  { left: "66%", top: "6%", tip: "below" },
-  { left: "78%", top: "40%", tip: "below" },
-  { left: "94%", top: "76%", tip: "above" },
+  { left: "4%", top: "80%", tip: "above" },
+  { left: "20%", top: "42%", tip: "below" },
+  { left: "26%", top: "2%", tip: "below" },
+  { left: "74%", top: "2%", tip: "below" },
+  { left: "80%", top: "42%", tip: "below" },
+  { left: "96%", top: "80%", tip: "above" },
 ];
 
 // AI-generated cutout illustrations for every stand (transparent background,
@@ -138,7 +138,7 @@ export function StandsDiagram() {
   return (
     <div>
       {/* Desktop / tablet: plan de la halle, les stands côte à côte */}
-      <div className="relative mx-auto hidden aspect-[1.55/1] w-full max-w-4xl sm:block">
+      <div className="relative mx-auto hidden aspect-[1.3/1] w-full max-w-4xl sm:block">
         <svg
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
@@ -166,7 +166,7 @@ export function StandsDiagram() {
           return (
             <div
               key={stand.slug}
-              className={`absolute w-[29%] -translate-x-1/2 text-center ${isHovered ? "z-20" : "z-0"}`}
+              className={`absolute w-[36%] -translate-x-1/2 text-center ${isHovered ? "z-20" : "z-0"}`}
               style={{ left: pos.left, top: pos.top }}
             >
               <StandLabel number={index + 1} title={stand.title} />
@@ -209,7 +209,7 @@ export function StandsDiagram() {
         })}
 
         {/* Central bar, set slightly lower to read as the heart of the terrace */}
-        <div className="absolute w-[29%] -translate-x-1/2 text-center" style={{ left: "50%", top: "88%" }}>
+        <div className="absolute w-[26%] -translate-x-1/2 text-center" style={{ left: "50%", top: "84%" }}>
           <StandLabel title="Bar" />
           <ContainerTile
             href={`/cuisines#${bar.slug}`}
@@ -252,7 +252,7 @@ export function StandsDiagram() {
       </ul>
 
       {/* How it works, in four steps */}
-      <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:grid-cols-4 sm:gap-0 sm:divide-x sm:divide-ink-700 sm:rounded-2xl sm:border sm:border-ink-700 sm:bg-ink-900/60">
+      <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-24 sm:grid-cols-4 sm:gap-0 sm:divide-x sm:divide-ink-700 sm:rounded-2xl sm:border sm:border-ink-700 sm:bg-ink-900/60">
         {steps.map(({ icon: Icon, title, detail }) => (
           <div key={title} className="flex flex-col items-center gap-1.5 rounded-2xl bg-ink-900/60 p-4 text-center sm:rounded-none sm:bg-transparent">
             <Icon className="h-5 w-5 text-mustard-500" weight="duotone" />
