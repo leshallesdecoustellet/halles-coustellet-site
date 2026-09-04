@@ -223,21 +223,21 @@ export function StandsDiagram() {
         </div>
       </div>
 
-      {/* Mobile: stacked list, left to right order preserved */}
+      {/* Mobile: stacked list of the same illustrated containers, left to right order preserved */}
       <ul className="space-y-3 sm:hidden">
-        {stands.map((stand) => (
+        {[...stands, bar].map((stand) => (
           <li key={stand.slug}>
             <Link
               href={`/cuisines#${stand.slug}`}
-              className="flex items-center gap-4 rounded-2xl bg-ink-800 p-3 transition-colors hover:bg-ink-700"
+              className="flex items-center gap-3 rounded-2xl bg-ink-800 p-3 transition-colors hover:bg-ink-700"
             >
-              <span className="relative block h-16 w-16 shrink-0 overflow-hidden rounded-full">
+              <span className="relative block h-16 w-24 shrink-0">
                 <Image
-                  src={stand.cardImage ?? stand.heroImage}
+                  src={illustrations[stand.slug] ?? BAR_ILLUSTRATION}
                   alt=""
                   fill
-                  sizes="64px"
-                  className={`object-cover ${stand.cardImage ? "" : stand.heroObjectPosition ?? ""}`}
+                  sizes="96px"
+                  className="object-contain"
                 />
               </span>
               <span>
