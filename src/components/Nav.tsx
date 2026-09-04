@@ -121,7 +121,7 @@ export function Nav() {
             ))}
           </ul>
           <p className="mb-2 mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-paper-500">
-            Acces rapide aux cuisines
+            Accès rapide aux cuisines
           </p>
           <ul className="grid grid-cols-2 gap-2">
             {stands.map((stand) => (

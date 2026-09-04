@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contactez Les Halles de Coustellet, foodcourt a Oppede dans le Luberon : adresse, telephone et formulaire de contact.",
+    "Contactez Les Halles de Coustellet, foodcourt à Oppède dans le Luberon : adresse, téléphone et formulaire de contact.",
 };
 
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -28,7 +28,7 @@ export default function ContactPage() {
             Nous contacter
           </h1>
           <p className="mt-5 max-w-[52ch] text-base leading-relaxed text-paper-300 sm:text-lg">
-            Une question, une reservation pour un groupe, une demande d&apos;evenement ? Ecrivez-nous ou appelez directement.
+            Une question, une réservation pour un groupe, une demande d&apos;événement ? Écrivez-nous ou appelez directement.
           </p>
         </div>
       </section>
@@ -55,16 +55,16 @@ export default function ContactPage() {
             </div>
             <div className="mt-8 flex flex-wrap gap-4">
               <LinkButton href={mapsHref} variant="secondary" target="_blank" rel="noreferrer">
-                Voir l&apos;itineraire
+                Voir l&apos;itinéraire
               </LinkButton>
               <LinkButton href="/infos-pratiques" variant="ghost">
-                Horaires et acces -&gt;
+                Horaires et accès -&gt;
               </LinkButton>
             </div>
           </Reveal>
 
           <Reveal delay={0.08}>
-            <SectionHeading title="Nous ecrire" />
+            <SectionHeading title="Nous écrire" />
             <div className="mt-6">
               <ContactForm />
             </div>

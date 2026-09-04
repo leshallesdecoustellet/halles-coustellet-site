@@ -24,7 +24,7 @@ export function PlaceholderImage({ label, className }: PlaceholderImageProps) {
       />
       <Camera className="h-7 w-7 text-paper-500" weight="light" />
       <p className="max-w-[22ch] text-sm font-medium text-paper-500">
-        Photo a venir
+        Photo à venir
         <span className="mt-1 block text-xs font-normal text-paper-500/70">
           {label}
         </span>

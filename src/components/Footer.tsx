@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { InstagramLogo, FacebookLogo, MapPin, Phone } from "@phosphor-icons/react/dist/ssr";
 import { Logo } from "./Logo";
-import { stands } from "@/content/stands";
+import { stands, bar } from "@/content/stands";
 import { site } from "@/lib/site";
 
 export function Footer() {
@@ -11,7 +11,7 @@ export function Footer() {
         <div>
           <Logo variant="compact" />
           <p className="mt-5 max-w-[38ch] text-sm leading-relaxed text-paper-300">
-            Six cuisines independantes, une terrasse commune, en plein air au coeur du Luberon.
+            Six cuisines indépendantes, une terrasse commune, en plein air au cœur du Luberon.
           </p>
           <div className="mt-6 flex items-center gap-4">
             <a
@@ -50,6 +50,14 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href={`/cuisines#${bar.slug}`}
+                className="text-sm text-paper-300 transition-colors hover:text-mustard-400"
+              >
+                {bar.title}
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -78,7 +86,7 @@ export function Footer() {
               href="/infos-pratiques"
               className="text-sm font-semibold text-mustard-400 hover:text-mustard-300"
             >
-              Horaires et acces
+              Horaires et accès
             </Link>
             <Link
               href="/contact"
@@ -93,7 +101,7 @@ export function Footer() {
       <div className="border-t border-ink-700">
         <div className="container-page flex flex-col gap-2 py-6 text-xs text-paper-500 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} {site.shortName}</p>
-          <p>Site vitrine de demonstration. Contenus et horaires a confirmer avant publication.</p>
+          <p>Site vitrine de démonstration. Contenus et horaires à confirmer avant publication.</p>
         </div>
       </div>
     </footer>

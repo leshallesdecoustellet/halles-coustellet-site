@@ -8,12 +8,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} - Foodcourt a Oppede, Luberon`,
+    default: `${site.name} - Foodcourt à Oppède, Luberon`,
     template: `%s - ${site.name}`,
   },
   description: site.description,
   openGraph: {
-    title: `${site.name} - Foodcourt a Oppede, Luberon`,
+    title: `${site.name} - Foodcourt à Oppède, Luberon`,
     description: site.description,
     url: site.url,
     siteName: site.name,
@@ -43,10 +43,10 @@ function LocalBusinessSchema() {
     telephone: site.phone,
     priceRange: "EUR EUR EUR",
     servesCuisine: [
-      "Creperie",
-      "Cuisine thailandaise",
+      "Grillades",
+      "Cuisine thaïlandaise",
       "Cuisine libanaise",
-      "Cuisine gastronomique francaise",
+      "Cuisine gastronomique française",
       "Burgers et tacos",
       "Tapas espagnoles",
     ],

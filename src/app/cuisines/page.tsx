@@ -4,14 +4,15 @@ import { FacebookLogo, InstagramLogo, Phone } from "@phosphor-icons/react/dist/s
 import { Section, SectionHeading } from "@/components/Section";
 import { LinkButton } from "@/components/Button";
 import { Reveal } from "@/components/Reveal";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
+import { Countdown } from "@/components/Countdown";
+import { PhotoGallery } from "@/components/PhotoGallery";
 import { LogoMark } from "@/components/Logo";
-import { stands, type Stand } from "@/content/stands";
+import { stands, bar, type Stand } from "@/content/stands";
 
 export const metadata: Metadata = {
   title: "Nos cuisines",
   description:
-    "Les 6 cuisines independantes des Halles de Coustellet : gastronomique, libanaise, thailandaise, creperie, burger & tacos, tapas espagnoles.",
+    "Les 6 cuisines indépendantes des Halles de Coustellet : gastronomique, libanaise, thaïlandaise, grillades, burger & tacos, tapas espagnoles.",
 };
 
 function StandSection({ stand, index }: { stand: Stand; index: number }) {
@@ -26,6 +27,14 @@ function StandSection({ stand, index }: { stand: Stand; index: number }) {
           {stand.title}
         </h2>
         <p className="mt-3 max-w-[60ch] text-base leading-relaxed text-paper-300">{stand.subtitle}</p>
+        {stand.openingNote ? (
+          <span className="mt-4 inline-flex items-center gap-2 rounded-full border border-mustard-700/50 bg-mustard-500/10 px-4 py-1.5 text-xs font-semibold text-mustard-400">
+            {stand.openingNote}
+          </span>
+        ) : null}
+        {stand.openingDate ? (
+          <Countdown target={stand.openingDate} label="Ouverture dans" />
+        ) : null}
       </Reveal>
 
       <Reveal delay={0.05}>
@@ -55,7 +64,7 @@ function StandSection({ stand, index }: { stand: Stand; index: number }) {
               </div>
             ) : (
               <div className="flex flex-col items-center gap-3 py-4">
-                <LogoMark className="h-10 w-10 text-mustard-500" />
+                <LogoMark className="h-14 w-14" />
                 <p className="font-display text-lg font-bold text-paper-100">
                   {stand.brandName ?? stand.title}
                 </p>
@@ -115,25 +124,14 @@ function StandSection({ stand, index }: { stand: Stand; index: number }) {
         </Reveal>
       </div>
 
-      <div className="mt-10 grid gap-4 sm:grid-cols-3">
-        {stand.gallery.map((image, imgIndex) => (
-          <Reveal key={image.alt} delay={imgIndex * 0.05}>
-            {image.src ? (
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  sizes="(min-width: 640px) 33vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            ) : (
-              <PlaceholderImage label={image.alt} className="aspect-[4/5] rounded-2xl" />
-            )}
-          </Reveal>
-        ))}
-      </div>
+      <Reveal delay={0.05}>
+        <PhotoGallery
+          items={stand.gallery}
+          gridClassName="mt-10 grid gap-4 sm:grid-cols-3"
+          itemClassName="aspect-[4/5] rounded-2xl"
+          sizes="(min-width: 640px) 33vw, 100vw"
+        />
+      </Reveal>
 
       <div className="mt-14">
         <h3 className="font-display text-xl font-bold text-paper-100">La carte</h3>
@@ -164,7 +162,7 @@ function StandSection({ stand, index }: { stand: Stand; index: number }) {
           ))}
         </div>
         <p className="mt-10 text-sm text-paper-500">
-          Carte et prix indicatifs, releves sur place. A confirmer avant publication.
+          Carte et prix indicatifs, relevés sur place. À confirmer avant publication.
         </p>
       </div>
     </Section>
@@ -183,7 +181,7 @@ export default function CuisinesPage() {
             Six chefs, six univers
           </h1>
           <p className="mt-5 max-w-[52ch] text-base leading-relaxed text-paper-300 sm:text-lg">
-            Chaque stand raconte une histoire differente. Explorez les cartes, ou laissez-vous porter d&apos;un plat a l&apos;autre.
+            Chaque stand raconte une histoire différente. Explorez les cartes, ou laissez-vous porter d&apos;un plat à l&apos;autre.
           </p>
         </div>
       </section>
@@ -200,6 +198,12 @@ export default function CuisinesPage() {
                 {stand.cuisine}
               </a>
             ))}
+            <a
+              href={`#${bar.slug}`}
+              className="whitespace-nowrap rounded-full border border-ink-600 px-4 py-2 text-sm text-paper-300 transition-colors hover:border-mustard-500 hover:text-mustard-400"
+            >
+              {bar.cuisine}
+            </a>
           </div>
         </div>
       </div>
@@ -207,14 +211,15 @@ export default function CuisinesPage() {
       {stands.map((stand, index) => (
         <StandSection key={stand.slug} stand={stand} index={index} />
       ))}
+      <StandSection stand={bar} index={stands.length} />
 
       <Section>
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
             <SectionHeading
               align="center"
-              title="Une question sur une carte ou un evenement ?"
-              lede="Ecrivez-nous, nous revenons vers vous rapidement."
+              title="Une question sur une carte ou un événement ?"
+              lede="Écrivez-nous, nous revenons vers vous rapidement."
             />
             <div className="mt-7 flex justify-center">
               <LinkButton href="/contact">Nous contacter</LinkButton>

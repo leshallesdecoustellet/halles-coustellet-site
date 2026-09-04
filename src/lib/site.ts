@@ -3,32 +3,33 @@ export const site = {
   legalName: "Les Halles de Coustellet Foodcourt",
   shortName: "Les Halles de Coustellet",
   description:
-    "Foodcourt en plein air au coeur du Luberon : 6 cuisines independantes, une terrasse commune, des concerts et des soirees a partager en famille ou entre amis.",
+    "Foodcourt en plein air au cœur du Luberon : 6 cuisines indépendantes, une terrasse commune, des concerts et des soirées à partager en famille ou entre amis.",
   url: "https://www.leshallesdecoustellet.fr",
   phone: "+33422912930",
   phoneDisplay: "04 22 91 29 30",
   address: {
     street: "1 Rue du Syrah",
     postalCode: "84580",
-    city: "Oppede",
-    cityDisplay: "Oppede (Coustellet)",
-    region: "Provence-Alpes-Cote d'Azur",
+    city: "Oppède",
+    cityDisplay: "Oppède (Coustellet)",
+    region: "Provence-Alpes-Côte d'Azur",
     country: "FR",
   },
   geo: {
-    // Approximate coordinates for Coustellet, Oppede, Luberon.
-    // A CONFIRMER avec le client / releve GPS exact avant mise en production.
+    // Approximate coordinates for Coustellet, Oppède, Luberon.
+    // A CONFIRMER avec le client / relevé GPS exact avant mise en production.
     latitude: 43.8847,
     longitude: 5.1414,
   },
   hours: [
     { days: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "11:30", closes: "14:00" },
-    { days: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "18:30", closes: "21:30" },
+    { days: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "18:30", closes: "21:00" },
   ],
   hoursDisplay: [
     { label: "Mardi - Samedi", value: "11h30 - 14h00" },
-    { label: "Mardi - Samedi (soir)", value: "18h30 - 21h30" },
-    { label: "Dimanche & lundi", value: "Ferme" },
+    { label: "Mardi - Samedi (soir)", value: "18h30 - 21h00" },
+    { label: "Dimanche & lundi", value: "Fermé" },
+    { label: "Fermeture annuelle", value: "15 décembre - 15 février" },
   ],
   social: {
     instagram: "https://www.instagram.com/leshallesdecoustellet/",

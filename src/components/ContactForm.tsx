@@ -6,9 +6,9 @@ import { CheckCircle, CircleNotch } from "@phosphor-icons/react/dist/ssr";
 type Status = "idle" | "loading" | "success" | "error";
 
 const subjects = [
-  "Question generale",
-  "Reservation groupe",
-  "Concerts et evenements",
+  "Question générale",
+  "Réservation groupe",
+  "Concerts et événements",
   "Presse",
   "Autre",
 ];
@@ -29,7 +29,7 @@ export function ContactForm() {
     return (
       <div className="rounded-2xl border border-mustard-700/50 bg-mustard-500/10 p-8 text-center">
         <CheckCircle className="mx-auto h-9 w-9 text-mustard-400" weight="fill" />
-        <p className="mt-4 font-display text-xl font-bold text-paper-100">Message envoye</p>
+        <p className="mt-4 font-display text-xl font-bold text-paper-100">Message envoyé</p>
         <p className="mt-2 text-sm leading-relaxed text-paper-300">
           Merci, nous revenons vers vous rapidement.
         </p>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Clock, MapPin, Warning, Car, Umbrella } from "@phosphor-icons/react/dist/ssr";
+import { Clock, MapPin, Car, Umbrella } from "@phosphor-icons/react/dist/ssr";
 import { Section, SectionHeading } from "@/components/Section";
 import { LinkButton } from "@/components/Button";
 import { Reveal } from "@/components/Reveal";
@@ -8,17 +8,8 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Infos pratiques",
   description:
-    "Horaires, adresse et acces des Halles de Coustellet, foodcourt a Oppede dans le Luberon.",
+    "Horaires, adresse et accès des Halles de Coustellet, foodcourt à Oppède dans le Luberon.",
 };
-
-function ToConfirm({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="flex items-start gap-3 rounded-2xl border border-mustard-700/50 bg-mustard-500/10 p-4">
-      <Warning className="mt-0.5 h-5 w-5 shrink-0 text-mustard-400" weight="fill" />
-      <p className="text-sm leading-relaxed text-paper-200">{children}</p>
-    </div>
-  );
-}
 
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   `${site.address.street}, ${site.address.postalCode} ${site.address.city}`
@@ -56,11 +47,6 @@ export default function InfosPratiquesPage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-6">
-              <ToConfirm>
-                Horaires confirmes par la signaletique officielle du lieu. Cas particuliers (services traiteur, jours feries, periode hivernale) a verifier avec l&apos;exploitant avant mise en ligne definitive.
-              </ToConfirm>
-            </div>
           </Reveal>
 
           <Reveal delay={0.08}>
@@ -88,7 +74,7 @@ export default function InfosPratiquesPage() {
       </Section>
 
       <Section tone="surface">
-        <SectionHeading title="Acces et stationnement" />
+        <SectionHeading title="Accès et stationnement" />
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <Reveal>
             <div className="flex items-start gap-3">
@@ -99,9 +85,9 @@ export default function InfosPratiquesPage() {
             </div>
           </Reveal>
           <Reveal delay={0.06}>
-            <ToConfirm>
-              Modalites de stationnement, accessibilite PMR et desserte en transport en commun a confirmer avec le client avant publication.
-            </ToConfirm>
+            <p className="text-sm leading-relaxed text-paper-300">
+              Un parking dédié est à disposition. Accès PMR : oui.
+            </p>
           </Reveal>
         </div>
       </Section>
@@ -113,14 +99,14 @@ export default function InfosPratiquesPage() {
             <div className="flex items-start gap-3">
               <Umbrella className="mt-1 h-5 w-5 shrink-0 text-mustard-500" weight="duotone" />
               <p className="text-sm leading-relaxed text-paper-300">
-                Les Halles se vivent en plein air, avec un espace terrasse et un espace interieur pres des stands.
+                Les Halles se vivent en plein air, avec un espace terrasse et un espace intérieur près des stands.
               </p>
             </div>
           </Reveal>
           <Reveal delay={0.06}>
-            <ToConfirm>
-              Capacite d&apos;accueil, presence d&apos;un espace couvert, animaux acceptes : informations a confirmer avec le client avant publication.
-            </ToConfirm>
+            <p className="text-sm leading-relaxed text-paper-300">
+              Un espace extérieur terrasse ainsi qu&apos;un espace couvert sont disponibles. Animaux acceptés.
+            </p>
           </Reveal>
         </div>
       </Section>
@@ -131,7 +117,7 @@ export default function InfosPratiquesPage() {
             <SectionHeading
               align="center"
               title="Une question ?"
-              lede="Pour nous ecrire, une reservation de groupe ou une demande d'evenement, direction la page contact."
+              lede="Pour nous écrire, une réservation de groupe ou une demande d'événement, direction la page contact."
             />
             <div className="mt-7 flex justify-center">
               <LinkButton href="/contact">Nous contacter</LinkButton>
