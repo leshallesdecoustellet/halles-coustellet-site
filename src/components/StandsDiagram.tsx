@@ -166,7 +166,7 @@ export function StandsDiagram() {
           return (
             <div
               key={stand.slug}
-              className={`absolute w-[23%] -translate-x-1/2 text-center ${isHovered ? "z-20" : "z-0"}`}
+              className={`absolute w-[29%] -translate-x-1/2 text-center ${isHovered ? "z-20" : "z-0"}`}
               style={{ left: pos.left, top: pos.top }}
             >
               <StandLabel number={index + 1} title={stand.title} />
@@ -209,7 +209,7 @@ export function StandsDiagram() {
         })}
 
         {/* Central bar, set slightly lower to read as the heart of the terrace */}
-        <div className="absolute w-[23%] -translate-x-1/2 text-center" style={{ left: "50%", top: "88%" }}>
+        <div className="absolute w-[29%] -translate-x-1/2 text-center" style={{ left: "50%", top: "88%" }}>
           <StandLabel title="Bar" />
           <ContainerTile
             href={`/cuisines#${bar.slug}`}
