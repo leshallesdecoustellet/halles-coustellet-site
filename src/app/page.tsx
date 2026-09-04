@@ -109,15 +109,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="cuisines" className="border-y border-ink-700 bg-ink-800 py-14 sm:py-20">
-        <div className="container-page">
+      <section id="cuisines" className="relative overflow-hidden border-y border-paper-500/20 py-14 sm:py-20">
+        <div className="absolute inset-0">
+          <ParallaxImage
+            src="/images/venue/terrasse-illustration.jpg"
+            alt="Illustration de la terrasse commune des Halles de Coustellet, sous les arbres"
+            className="h-full w-full"
+          />
+        </div>
+        <div className="absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-paper-50/95 via-paper-50/60 to-transparent sm:h-96" />
+        <div className="container-page relative">
           <Reveal>
             <div className="mb-4 flex justify-center">
-              <span className="inline-flex items-center gap-2 rounded-full border border-mustard-700/50 bg-mustard-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-mustard-400">
+              <span className="inline-flex items-center gap-2 rounded-full border border-mustard-600/40 bg-paper-50/90 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-mustard-700 backdrop-blur-sm">
                 6 cuisines · 1 seul lieu
               </span>
             </div>
-            <SectionHeading align="center" title="Comment ça s'organise sur place" />
+            <SectionHeading align="center" title="Comment ça s'organise sur place" tone="light" />
           </Reveal>
           <div className="mt-6">
             <StandsDiagram />
