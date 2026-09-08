@@ -111,7 +111,7 @@ export function Footer() {
               </Link>
             </div>
           </div>
-          <p>Contenus et horaires à confirmer avant publication.</p>
+          <p>Contenus à confirmer avant publication.</p>
         </div>
       </div>
     </footer>

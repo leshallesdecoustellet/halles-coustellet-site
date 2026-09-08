@@ -9,7 +9,7 @@ export const site = {
   phoneDisplay: "04 22 91 29 30",
   email: "ladolcevita84@yahoo.fr",
   address: {
-    street: "1 Rue du Syrah",
+    street: "1 Rue de la Syrah",
     postalCode: "84580",
     city: "Oppède",
     cityDisplay: "Oppède (Coustellet)",
