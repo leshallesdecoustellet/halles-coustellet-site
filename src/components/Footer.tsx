@@ -99,9 +99,19 @@ export function Footer() {
       </div>
 
       <div className="border-t border-ink-700">
-        <div className="container-page flex flex-col gap-2 py-6 text-xs text-paper-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {new Date().getFullYear()} {site.shortName}</p>
-          <p>Site vitrine de démonstration. Contenus et horaires à confirmer avant publication.</p>
+        <div className="container-page flex flex-col gap-3 py-6 text-xs text-paper-500 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+            <p>&copy; {new Date().getFullYear()} {site.shortName}</p>
+            <div className="flex items-center gap-4">
+              <Link href="/mentions-legales" className="transition-colors hover:text-mustard-400">
+                Mentions légales
+              </Link>
+              <Link href="/politique-de-confidentialite" className="transition-colors hover:text-mustard-400">
+                Politique de confidentialité
+              </Link>
+            </div>
+          </div>
+          <p>Contenus et horaires à confirmer avant publication.</p>
         </div>
       </div>
     </footer>

@@ -41,6 +41,7 @@ function LocalBusinessSchema() {
     description: site.description,
     url: site.url,
     telephone: site.phone,
+    email: site.email,
     priceRange: "EUR EUR EUR",
     servesCuisine: [
       "Grillades",

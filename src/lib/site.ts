@@ -7,6 +7,7 @@ export const site = {
   url: "https://www.leshallesdecoustellet.fr",
   phone: "+33422912930",
   phoneDisplay: "04 22 91 29 30",
+  email: "ladolcevita84@yahoo.fr",
   address: {
     street: "1 Rue du Syrah",
     postalCode: "84580",
@@ -34,6 +35,17 @@ export const site = {
   social: {
     instagram: "https://www.instagram.com/leshallesdecoustellet/",
     facebook: "https://www.facebook.com/leshallesdecoustellet/",
+  },
+  legal: {
+    companyName: "MAXELISA",
+    legalForm: "Société à responsabilité limitée (SARL)",
+    shareCapital: "10 000,00 Euros",
+    registeredOffice: "1 Rue de la Syrah, 84580 Oppède",
+    rcs: "750 116 501 R.C.S. Avignon",
+    // SIRET déduit du SIREN présent sur le KBIS (750 116 501) + code établissement 00019.
+    // À faire confirmer par le client avant publication : le KBIS ne montre que le SIREN.
+    siret: "750 116 501 00019",
+    director: "M. Riccardo PALADINI",
   },
 } as const;
 
