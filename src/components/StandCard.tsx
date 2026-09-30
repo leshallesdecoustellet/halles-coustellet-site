@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Stand } from "@/content/stands";
+import { BeforeOpening } from "@/components/BeforeOpening";
 
 export function StandCard({
   stand,
@@ -27,9 +28,11 @@ export function StandCard({
       />
       <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/25 to-transparent" />
       {stand.openingNote ? (
-        <span className="absolute left-4 top-4 rounded-full border border-mustard-700/50 bg-ink-950/80 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.08em] text-mustard-400 backdrop-blur">
-          Bientôt
-        </span>
+        <BeforeOpening date={stand.openingDate}>
+          <span className="absolute left-4 top-4 rounded-full border border-mustard-700/50 bg-ink-950/80 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.08em] text-mustard-400 backdrop-blur">
+            Bientôt
+          </span>
+        </BeforeOpening>
       ) : null}
       <span
         className={`absolute right-4 top-4 font-display font-bold text-paper-100/30 ${

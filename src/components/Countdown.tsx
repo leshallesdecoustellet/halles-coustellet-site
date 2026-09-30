@@ -41,7 +41,7 @@ export function Countdown({ target, label }: CountdownProps) {
   }
 
   if (parts.done) {
-    return <p className="mt-4 text-sm font-semibold text-mustard-400">C&apos;est ouvert !</p>;
+    return null;
   }
 
   const units = [

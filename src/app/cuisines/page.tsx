@@ -5,6 +5,7 @@ import { Section, SectionHeading } from "@/components/Section";
 import { LinkButton } from "@/components/Button";
 import { Reveal } from "@/components/Reveal";
 import { Countdown } from "@/components/Countdown";
+import { BeforeOpening } from "@/components/BeforeOpening";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { LogoMark } from "@/components/Logo";
 import { stands, bar, type Stand } from "@/content/stands";
@@ -28,9 +29,11 @@ function StandSection({ stand, index }: { stand: Stand; index: number }) {
         </h2>
         <p className="mt-3 max-w-[60ch] text-base leading-relaxed text-paper-300">{stand.subtitle}</p>
         {stand.openingNote ? (
-          <span className="mt-4 inline-flex items-center gap-2 rounded-full border border-mustard-700/50 bg-mustard-500/10 px-4 py-1.5 text-xs font-semibold text-mustard-400">
-            {stand.openingNote}
-          </span>
+          <BeforeOpening date={stand.openingDate}>
+            <span className="mt-4 inline-flex items-center gap-2 rounded-full border border-mustard-700/50 bg-mustard-500/10 px-4 py-1.5 text-xs font-semibold text-mustard-400">
+              {stand.openingNote}
+            </span>
+          </BeforeOpening>
         ) : null}
         {stand.openingDate ? (
           <Countdown target={stand.openingDate} label="Ouverture dans" />
@@ -135,7 +138,11 @@ function StandSection({ stand, index }: { stand: Stand; index: number }) {
 
       <div className="mt-14">
         <h3 className="font-display text-xl font-bold text-paper-100">La carte</h3>
-        {stand.menuNote ? <p className="mt-1 text-sm text-paper-500">{stand.menuNote}</p> : null}
+        {stand.menuNote ? (
+          <BeforeOpening date={stand.openingDate}>
+            <p className="mt-1 text-sm text-paper-500">{stand.menuNote}</p>
+          </BeforeOpening>
+        ) : null}
         <div className="mt-6 grid gap-10 lg:grid-cols-2">
           {stand.menu.map((section, sectionIndex) => (
             <Reveal key={section.title} delay={(sectionIndex % 2) * 0.06}>
