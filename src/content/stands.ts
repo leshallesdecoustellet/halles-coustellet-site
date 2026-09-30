@@ -610,7 +610,7 @@ export const bar: Stand = {
       items: [{ name: "Champagne 1er Cru", price: "50 EUR la bouteille" }],
     },
   ],
-  menuNote: "Carte photographiée sur place aux Halles ; noms des vins à reconfirmer avec l'exploitant avant publication.",
+  menuNote: "Carte et prix indicatifs peuvent varier.",
 };
 
 export function getStandBySlug(slug: string) {

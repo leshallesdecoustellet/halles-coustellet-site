@@ -112,6 +112,9 @@ export function Footer() {
             </div>
           </div>
         </div>
+        <div className="container-page border-t border-ink-700 py-5 text-center text-base text-paper-300">
+          <p>Réalisé par THE FLOCH AGENCY</p>
+        </div>
       </div>
     </footer>
   );

@@ -162,7 +162,7 @@ function StandSection({ stand, index }: { stand: Stand; index: number }) {
           ))}
         </div>
         <p className="mt-10 text-sm text-paper-500">
-          Carte et prix indicatifs, relevés sur place. À confirmer avant publication.
+          Carte et prix indicatifs peuvent varier.
         </p>
       </div>
     </Section>
