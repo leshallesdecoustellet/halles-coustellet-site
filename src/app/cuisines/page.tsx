@@ -145,9 +145,9 @@ function StandSection({ stand, index }: { stand: Stand; index: number }) {
                 {section.items.map((item) => (
                   <li key={item.name} className="py-3 first:pt-0">
                     <div className="flex items-baseline justify-between gap-4">
-                      <span className="font-semibold text-paper-100">{item.name}</span>
+                      <span className="min-w-0 font-semibold text-paper-100">{item.name}</span>
                       {item.price ? (
-                        <span className="whitespace-nowrap font-mono text-sm text-mustard-400">
+                        <span className="shrink-0 max-w-[60%] text-right font-mono text-sm text-mustard-400 sm:max-w-none sm:whitespace-nowrap">
                           {item.price}
                         </span>
                       ) : null}
