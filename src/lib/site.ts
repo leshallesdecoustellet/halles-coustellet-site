@@ -4,7 +4,7 @@ export const site = {
   shortName: "Les Halles de Coustellet",
   description:
     "Foodcourt en plein air au cœur du Luberon : 6 cuisines indépendantes, une terrasse commune, des concerts et des soirées à partager en famille ou entre amis.",
-  url: "https://www.leshallesdecoustellet.fr",
+  url: "https://www.leshallesdecoustellet.com",
   phone: "+33422912930",
   phoneDisplay: "04 22 91 29 30",
   email: "ladolcevita84@yahoo.fr",
