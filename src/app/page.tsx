@@ -117,6 +117,7 @@ export default function Home() {
             className="h-full w-full"
           />
         </div>
+        <div className="absolute inset-0 bg-ink-950/30" />
         <div className="absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-paper-50/95 via-paper-50/60 to-transparent sm:h-96" />
         <div className="container-page relative">
           <Reveal>

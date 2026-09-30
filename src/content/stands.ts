@@ -198,7 +198,7 @@ export const stands: Stand[] = [
     brandName: "Les Délices du Liban",
     title: "Libanaise",
     position: "Haut gauche du demi-cercle",
-    subtitle: "Mezze, houmous maison et grillades du Liban",
+    subtitle: "Mezze, houmous maison et chawarma",
     phone: "+33778737157",
     phoneDisplay: "07 78 73 71 57",
     social: {
@@ -442,9 +442,9 @@ export const stands: Stand[] = [
   },
   {
     slug: "espagnole",
-    cuisine: "Espagnole",
+    cuisine: "Tapas",
     brandName: "O Tapas'Fin",
-    title: "Espagnole",
+    title: "Tapas",
     position: "Tout à droite du demi-cercle",
     subtitle: "O Tapas'Fin : planches, tapas et salades à partager",
     phone: "+33616185850",

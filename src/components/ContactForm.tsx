@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { CheckCircle, CircleNotch } from "@phosphor-icons/react/dist/ssr";
 
@@ -18,11 +19,30 @@ export function ContactForm() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
+    if (!form.reportValidity()) return;
+
+    const formId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+    if (!formId) {
+      setStatus("error");
+      return;
+    }
+
     setStatus("loading");
-    // NOTE: demonstration only. Brancher sur un service d'envoi d'email
-    // (Resend, Formspree, route API interne...) avant mise en production.
-    await new Promise((resolve) => setTimeout(resolve, 900));
-    setStatus("success");
+    const data = new FormData(form);
+    data.set("_subject", `[Site web] ${String(data.get("subject") ?? "")}`);
+    data.delete("consent");
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${formId}`, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+      setStatus(response.ok ? "success" : "error");
+    } catch {
+      setStatus("error");
+    }
   }
 
   if (status === "success") {
@@ -45,7 +65,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+    <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-paper-200">
@@ -112,6 +132,30 @@ export function ContactForm() {
           placeholder="Votre message"
         />
       </div>
+
+      <input type="checkbox" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+
+      <label className="flex items-start gap-3 text-sm leading-relaxed text-paper-300">
+        <input
+          type="checkbox"
+          name="consent"
+          required
+          className="mt-1 h-4 w-4 shrink-0 accent-mustard-500"
+        />
+        <span>
+          J&apos;accepte que mes données soient utilisées pour répondre à ma demande, conformément à la{" "}
+          <Link href="/politique-de-confidentialite" className="text-mustard-400 underline hover:text-mustard-300">
+            politique de confidentialité
+          </Link>
+          .
+        </span>
+      </label>
+
+      {status === "error" && (
+        <p role="alert" className="text-sm text-red-400">
+          L&apos;envoi a échoué. Réessayez ou contactez-nous par téléphone.
+        </p>
+      )}
 
       <button
         type="submit"

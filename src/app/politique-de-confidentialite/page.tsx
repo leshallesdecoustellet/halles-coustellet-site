@@ -52,7 +52,7 @@ export default function PolitiqueConfidentialitePage() {
           <Reveal delay={0.08}>
             <h2 className="font-display text-lg font-bold text-paper-100">3. Finalité et destinataire des données</h2>
             <p className="mt-3 text-sm leading-relaxed text-paper-300">
-              Les informations transmises via le formulaire de contact sont envoyées directement par email à l&apos;adresse de contact des Halles de Coustellet, dans le seul but de répondre à votre demande (question, réservation de groupe, demande d&apos;information). Ces données ne sont ni stockées dans une base de données, ni revendues, ni transmises à un tiers autre que l&apos;outil technique utilisé pour l&apos;acheminement du formulaire (Web3Forms), qui ne fait que transmettre le message par email sans conserver de base de données consultable.
+              Les informations transmises via le formulaire de contact sont envoyées directement par email à l&apos;adresse de contact des Halles de Coustellet, dans le seul but de répondre à votre demande (question, réservation de groupe, demande d&apos;information). Ces données ne sont pas revendues. Elles transitent par le prestataire technique Formspree (Formspree, Inc., États-Unis), qui achemine le message par email et en conserve une copie dans son interface d&apos;administration, accessible uniquement à MAXELISA.
             </p>
           </Reveal>
 
