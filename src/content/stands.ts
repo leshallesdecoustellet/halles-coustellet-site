@@ -297,8 +297,7 @@ export const stands: Stand[] = [
     cardImage: "/images/stands/plats-en-sauce/boeuf-bourguignon.jpg",
     cardImageAlt: "Bœuf bourguignon mijoté, carottes et pommes de terre",
     paragraph: [
-      "Les petits plats en sauce, ce sont les recettes qui mijotent longtemps : pieds paquets marseillais, bœuf bourguignon, blanquette de veau à l'ancienne.",
-      "Des plats généreux, servis avec leur accompagnement, comme à la maison.",
+      "Venez déguster la cuisine du terroir : des petits plats mijotés et réconfortants, profondément ancrés dans les traditions provençales.",
     ],
     whyTitle: "Pourquoi ce food truck",
     why: "Parce qu'un bon plat en sauce demande du temps. Ici, on laisse mijoter, et on sert chaud.",

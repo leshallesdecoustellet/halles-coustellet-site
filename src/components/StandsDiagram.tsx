@@ -27,6 +27,9 @@ const nodePosition: { left: string; top: string; tip: "above" | "below" }[] = [
 // full 3D container volume baked in).
 const illustrations: Record<string, string> = {
   libanaise: "/images/stands/libanaise/illustration-ai.png",
+  // Anciennes illustrations conservées en attendant les nouvelles.
+  "plats-en-sauce": "/images/stands/gastronomique/illustration-ai.png",
+  pizza: "/images/stands/espagnole/illustration-ai.png",
   thailandaise: "/images/stands/thailandaise/illustration-ai.png",
   "burger-tacos": "/images/stands/burger-tacos/illustration-ai.png",
   grillades: "/images/stands/grillades/illustration-ai.png",
