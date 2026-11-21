@@ -55,7 +55,7 @@ export default function Home() {
             />
             <Reveal delay={0.3}>
               <p className="mt-5 max-w-[48ch] text-base leading-relaxed text-paper-300 sm:text-lg">
-                Grillades, tapas, mezze, curry, burgers et cuisine gastronomique, réunis en plein air au cœur du Luberon.
+                Grillades, pizzas, mezze, curry, burgers et petits plats en sauce, réunis en plein air au cœur du Luberon.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <LinkButton href="#cuisines">Découvrir les cuisines</LinkButton>

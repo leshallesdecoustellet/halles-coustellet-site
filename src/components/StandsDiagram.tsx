@@ -27,11 +27,9 @@ const nodePosition: { left: string; top: string; tip: "above" | "below" }[] = [
 // full 3D container volume baked in).
 const illustrations: Record<string, string> = {
   libanaise: "/images/stands/libanaise/illustration-ai.png",
-  gastronomique: "/images/stands/gastronomique/illustration-ai.png",
   thailandaise: "/images/stands/thailandaise/illustration-ai.png",
   "burger-tacos": "/images/stands/burger-tacos/illustration-ai.png",
   grillades: "/images/stands/grillades/illustration-ai.png",
-  espagnole: "/images/stands/espagnole/illustration-ai.png",
 };
 const BAR_ILLUSTRATION = "/images/venue/bar-illustration-ai.png";
 
@@ -39,11 +37,11 @@ const BAR_ILLUSTRATION = "/images/venue/bar-illustration-ai.png";
 // used only for the hover glow so it still feels tied to each stand.
 const standColors: Record<string, string> = {
   libanaise: "#8a9a2e",
-  gastronomique: "#14969a",
+  "plats-en-sauce": "#14969a",
   thailandaise: "#8a4aa8",
   "burger-tacos": "#f2790f",
   grillades: "#d4300f",
-  espagnole: "#d94a72",
+  pizza: "#d94a72",
 };
 
 type ContainerTileProps = {

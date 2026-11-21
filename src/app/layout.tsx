@@ -47,9 +47,9 @@ function LocalBusinessSchema() {
       "Grillades",
       "Cuisine thaïlandaise",
       "Cuisine libanaise",
-      "Cuisine gastronomique française",
+      "Plats en sauce traditionnels",
       "Burgers et tacos",
-      "Tapas espagnoles",
+      "Pizzas",
     ],
     address: {
       "@type": "PostalAddress",

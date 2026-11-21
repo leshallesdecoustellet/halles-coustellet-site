@@ -13,7 +13,7 @@ import { stands, bar, type Stand } from "@/content/stands";
 export const metadata: Metadata = {
   title: "Nos cuisines",
   description:
-    "Les 6 cuisines indépendantes des Halles de Coustellet : gastronomique, libanaise, thaïlandaise, grillades, burger & tacos, tapas espagnoles.",
+    "Les 6 cuisines indépendantes des Halles de Coustellet : petits plats en sauce, libanaise, thaïlandaise, grillades, burger & tacos et pizza.",
 };
 
 function StandSection({ stand, index }: { stand: Stand; index: number }) {
@@ -143,6 +143,9 @@ function StandSection({ stand, index }: { stand: Stand; index: number }) {
             <p className="mt-1 text-sm text-paper-500">{stand.menuNote}</p>
           </BeforeOpening>
         ) : null}
+        {stand.menu.length === 0 ? (
+          <p className="mt-4 text-sm text-paper-300">La carte sera bientôt disponible.</p>
+        ) : null}
         <div className="mt-6 grid gap-10 lg:grid-cols-2">
           {stand.menu.map((section, sectionIndex) => (
             <Reveal key={section.title} delay={(sectionIndex % 2) * 0.06}>
@@ -168,9 +171,11 @@ function StandSection({ stand, index }: { stand: Stand; index: number }) {
             </Reveal>
           ))}
         </div>
-        <p className="mt-10 text-sm text-paper-500">
-          Carte et prix indicatifs peuvent varier.
-        </p>
+        {stand.menu.length > 0 ? (
+          <p className="mt-10 text-sm text-paper-500">
+            Carte et prix indicatifs peuvent varier.
+          </p>
+        ) : null}
       </div>
     </Section>
   );
