@@ -409,7 +409,7 @@ export const stands: Stand[] = [
     cuisine: "Oriental",
     title: "Oriental",
     position: "Tout à droite du demi-cercle",
-    subtitle: "Couscous et tajines",
+    subtitle: "Couscous généreux et tajines parfumés, le goût du soleil en plein Luberon",
     heroImage: "/images/stands/oriental/couscous-royal.jpg",
     heroImageAlt: "Couscous royal : poulet, agneau, merguez et légumes mijotés sur semoule",
     heroObjectPosition: "object-[50%_45%]",
@@ -418,10 +418,11 @@ export const stands: Stand[] = [
     openingNote: "Nouveau stand aux Halles, ouverture le 15 février 2027",
     openingDate: "2027-02-15T11:30:00+01:00",
     paragraph: [
-      "Un stand oriental rejoint les Halles de Coustellet : couscous et tajines, mijotés et généreux.",
+      "Semoule fine, légumes fondants, viandes mijotées et bouillon parfumé aux épices : le nouveau stand oriental des Halles vous invite à un vrai voyage gourmand.",
+      "Couscous royal, couscous aux légumes ou tajine qui embaume dès qu'on soulève le couvercle, chaque assiette est servie généreuse, comme on l'aime.",
     ],
     whyTitle: "Pourquoi ce food truck",
-    why: "Parce qu'un couscous ou un tajine se partage, à la terrasse commune, entre amis ou en famille.",
+    why: "Parce qu'un bon couscous, c'est un moment de partage. Installez-vous à la terrasse, entre amis ou en famille, et laissez-vous gagner par les parfums d'épices.",
     gallery: [
       {
         src: "/images/stands/oriental/couscous-royal.jpg",
