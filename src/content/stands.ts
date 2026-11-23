@@ -410,8 +410,11 @@ export const stands: Stand[] = [
     title: "Oriental",
     position: "Tout à droite du demi-cercle",
     subtitle: "Couscous et tajines",
-    heroImage: "/images/venue/disposition-1.jpg",
-    heroImageAlt: "Les stands des Halles de Coustellet",
+    heroImage: "/images/stands/oriental/couscous-royal.jpg",
+    heroImageAlt: "Couscous royal : poulet, agneau, merguez et légumes mijotés sur semoule",
+    heroObjectPosition: "object-[50%_45%]",
+    cardImage: "/images/stands/oriental/tajine-zitoun.jpg",
+    cardImageAlt: "Tajine de poulet aux olives et carottes",
     openingNote: "Nouveau stand aux Halles, ouverture le 15 février 2027",
     openingDate: "2027-02-15T11:30:00+01:00",
     paragraph: [
@@ -419,7 +422,20 @@ export const stands: Stand[] = [
     ],
     whyTitle: "Pourquoi ce food truck",
     why: "Parce qu'un couscous ou un tajine se partage, à la terrasse commune, entre amis ou en famille.",
-    gallery: [{ alt: "Photos du stand oriental à venir" }],
+    gallery: [
+      {
+        src: "/images/stands/oriental/couscous-royal.jpg",
+        alt: "Couscous royal aux trois viandes et légumes",
+      },
+      {
+        src: "/images/stands/oriental/couscous-7-legumes.jpg",
+        alt: "Couscous aux sept légumes et pois chiches",
+      },
+      {
+        src: "/images/stands/oriental/tajine-zitoun.jpg",
+        alt: "Tajine de poulet aux olives",
+      },
+    ],
     menu: [
       {
         title: "Au menu",
