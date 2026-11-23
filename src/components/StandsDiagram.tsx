@@ -29,7 +29,7 @@ const illustrations: Record<string, string> = {
   libanaise: "/images/stands/libanaise/illustration-ai.png",
   // Anciennes illustrations conservées en attendant les nouvelles.
   "plats-en-sauce": "/images/stands/gastronomique/illustration-ai.png",
-  pizza: "/images/stands/espagnole/illustration-ai.png",
+  oriental: "/images/stands/espagnole/illustration-ai.png",
   thailandaise: "/images/stands/thailandaise/illustration-ai.png",
   "burger-tacos": "/images/stands/burger-tacos/illustration-ai.png",
   grillades: "/images/stands/grillades/illustration-ai.png",
@@ -44,7 +44,7 @@ const standColors: Record<string, string> = {
   thailandaise: "#8a4aa8",
   "burger-tacos": "#f2790f",
   grillades: "#d4300f",
-  pizza: "#d94a72",
+  oriental: "#d94a72",
 };
 
 type ContainerTileProps = {

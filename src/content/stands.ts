@@ -405,21 +405,29 @@ export const stands: Stand[] = [
     menuNote: "Pain burger façonné par un artisan boulanger, produits frais.",
   },
   {
-    slug: "pizza",
-    cuisine: "Pizza",
-    title: "Pizza",
+    slug: "oriental",
+    cuisine: "Oriental",
+    title: "Oriental",
     position: "Tout à droite du demi-cercle",
-    subtitle: "Pizzas, carte à venir",
+    subtitle: "Couscous et tajines",
     heroImage: "/images/venue/disposition-1.jpg",
     heroImageAlt: "Les stands des Halles de Coustellet",
-    openingNote: "Nouveau stand aux Halles, ouverture prochainement",
+    openingNote: "Nouveau stand aux Halles, ouverture le 15 février 2027",
+    openingDate: "2027-02-15T11:30:00+01:00",
     paragraph: [
-      "Un stand pizza rejoint bientôt les Halles de Coustellet.",
+      "Un stand oriental rejoint les Halles de Coustellet : couscous et tajines, mijotés et généreux.",
     ],
     whyTitle: "Pourquoi ce food truck",
-    why: "Parce qu'une pizza se partage facilement, à la terrasse commune, entre amis ou en famille.",
-    gallery: [{ alt: "Photos du stand pizza à venir" }],
-    menu: [],
+    why: "Parce qu'un couscous ou un tajine se partage, à la terrasse commune, entre amis ou en famille.",
+    gallery: [{ alt: "Photos du stand oriental à venir" }],
+    menu: [
+      {
+        title: "Au menu",
+        note: "Carte détaillée et prix à venir.",
+        items: [{ name: "Couscous" }, { name: "Tajines" }],
+      },
+    ],
+    menuNote: "Nouveau stand aux Halles, ouverture le 15 février 2027.",
   },
 ];
 

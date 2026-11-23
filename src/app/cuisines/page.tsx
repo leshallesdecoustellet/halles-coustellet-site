@@ -13,7 +13,7 @@ import { stands, bar, type Stand } from "@/content/stands";
 export const metadata: Metadata = {
   title: "Nos cuisines",
   description:
-    "Les 6 cuisines indépendantes des Halles de Coustellet : petits plats en sauce, libanaise, thaïlandaise, grillades, burger & tacos et pizza.",
+    "Les 6 cuisines indépendantes des Halles de Coustellet : petits plats en sauce, libanaise, thaïlandaise, grillades, burger & tacos et oriental.",
 };
 
 function StandSection({ stand, index }: { stand: Stand; index: number }) {

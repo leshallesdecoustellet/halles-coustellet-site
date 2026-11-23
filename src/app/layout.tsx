@@ -49,7 +49,7 @@ function LocalBusinessSchema() {
       "Cuisine libanaise",
       "Plats en sauce traditionnels",
       "Burgers et tacos",
-      "Pizzas",
+      "Cuisine orientale",
     ],
     address: {
       "@type": "PostalAddress",
